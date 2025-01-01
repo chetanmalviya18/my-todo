@@ -1,0 +1,13 @@
+{
+  "build": {
+    "builder": "python:3.13.1"
+  },
+  "deploy": {
+    "startCommand": "gunicorn app:app --bind 0.0.0.0:8000"
+  },
+  "disk": {
+    "name": "sqlite-disk",
+    "mountPath": "/app/data",
+    "sizeGB": 1
+  }
+}
